@@ -8,7 +8,7 @@ def _get_github_auth_responders():
     """
     返回 GitHub 用户名密码自动填充器
     """
-    username_responder = Responder(
+    username_responder = Responder(_get_github_auth_responders
         pattern="Username for 'https://github.com':",
         response='{}\n'.format(github_username)
     )
